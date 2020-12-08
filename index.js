@@ -11,7 +11,7 @@ const server = app.listen(9000, () => {
 const io = socketio(server);
 
 io.on('connection', socket => {
-  socket.emit('messageFromServer', { data: 'Welcome to socket server' });
+  socket.emit('messageFromServer', { data: 'Welcome to socket server hahaha' });
   socket.on('messageToServer', dataFromClient => {
     console.log(dataFromClient);
   });

@@ -7,14 +7,8 @@
 </head>
 <body>
   <h1>Hello Socket.IO</h1>
+  <div id="chat"></div>
   <script src="/socket.io/socket.io.js"></script>
-  <script>
-    const socket = io('http://localhost:9000')
-    socket.on('messageFromServer', dataFromServer => {
-      console.log(dataFromServer)
-
-      socket.emit('messageToServer', {data: 'This is from the client'})
-    })
-  </script>
+  <script src="app.js"></script>
 </body>
 </html>
