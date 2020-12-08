@@ -16,9 +16,9 @@ document.getElementById('message-form').addEventListener('submit', e => {
   socket.emit('newMessageToServer', { text: newMsg });
 });
 
-// socket.on('ping', () => {
-//   console.log('ping was recieved from server');
-// });
+socket.on('messageToClients', msg => {
+  document.querySelector('#messages').innerHTML += `<li>${msg.text}</li>`;
+});
 
 // socket.on('pong', latency => {
 //   console.log(latency);
